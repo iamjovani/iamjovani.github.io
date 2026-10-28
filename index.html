@@ -1,394 +1,273 @@
-<!DOCTYPE HTML>
-<!--
-	Paradigm Shift by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Jovani Samuels' portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jovani Samuels | Software Engineer in Kingston, Jamaica</title>
+  <meta name="description" content="Jovani Samuels is a software engineer and tech enthusiast in Kingston, Jamaica, building AI-powered applications and cloud systems. MSc Computer Science, AWS Certified Solutions Architect.">
+  <meta name="author" content="Jovani Samuels">
+  <link rel="canonical" href="https://iamjovani.github.io/">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Jovani Samuels | Software Engineer">
+  <meta property="og:description" content="Software engineer and tech enthusiast in Kingston, Jamaica. AI, cloud and full stack development.">
+  <meta property="og:url" content="https://iamjovani.github.io/">
+  <meta name="twitter:card" content="summary">
 
-				<!-- Intro -->
-					<section class="intro">
-						<header>
-							<h1>Jovani Samuels</h1>
-							<p>Showcasing my projects and abilities.</p>
-							<ul class="actions">
-								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
-							</ul>
-						</header>
-						<div class="content">
-							<span class="image fill" data-position="center"><img src="https://images.unsplash.com/photo-1528372444006-1bfc81acab02?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="" /></span>
-						</div>
-					</section>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jovani Samuels",
+    "url": "https://iamjovani.github.io/",
+    "jobTitle": "Software Engineer",
+    "address": { "@type": "PostalAddress", "addressLocality": "Kingston", "addressCountry": "JM" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "University of East London" },
+      { "@type": "CollegeOrUniversity", "name": "The University of the West Indies" }
+    ],
+    "knowsAbout": ["Artificial Intelligence", "Cloud Architecture", "AWS", "Full Stack Development", "Automation"],
+    "sameAs": [
+      "https://www.linkedin.com/in/iamjovani/",
+      "https://github.com/iamjovani",
+      "https://codepen.io/iamjovani"
+    ]
+  }
+  </script>
 
-				<!-- Section -->
-					<section id="first">
-						<header>
-							<h2>About Me</h2>
-						</header>
-						<div class="content">
-							<p><strong>Hello! I'm Jovani</strong>, a university student who is currently pursuing a Bachelor of Science in Computer Science. I attend The University of The West Indies, which is located in the Caribbean. I spend most of my free time practicing on Hackerrank or working on personal projects. I am currently in the final year of my studies.  I remain focus on growing and adapting the principles needed within the field as well as to display the ones I have been taught. I would also like to put my effort into making the software world a more functional and reliable one. </p>
-							<span class="image main"><img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="" /></span>
-						</div>
-					</section>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-				<!-- Section -->
-					<section>
-						<header>
-							<h2>Skills and abilities</h2>
-						</header>
-						<div class="content">
-							<p><strong>What i know about - </strong> here's a few technologies I've been working with recently:</p>
-							<ul class="feature-icons">
-								<li class="icon solid fa-code">Java Programming</li>
-								<li class="icon solid fa-code">Python Programming</li>
-								<li class="icon solid fa-code">Flask</li>
-								<li class="icon solid fa-code">PHP</li>
-								<li class="icon solid fa-code">Javascript</li>
-								<li class="icon solid fa-laptop">SQL Database</li>
-								<li class="icon solid fa-laptop">Object Oriented Programming</li>
-								<li class="icon solid fa-laptop">Software Testing</li>
-							</ul>
-							<p>I have also worked on projects that included the use of OpenGL, SDL and the Unity Game Engine. </p>
-						</div>
-					</section>
+  <style>
+    :root {
+      --paper: #EDF1F5;
+      --ink: #13203A;
+      --muted: #56627A;
+      --line: #CBD4E0;
+      --sea: #2C7DA0;
+      --sun: #E3A008;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font: 400 1.0625rem/1.65 "Instrument Sans", system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    a:focus-visible, .btn:focus-visible {
+      outline: 3px solid var(--sea);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
 
-				<!-- Section -->
-					
+    /* Hero */
+    .hero {
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 12vh;
+      overflow: hidden;
+    }
+    #net {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-mask-image: linear-gradient(to right, transparent 15%, #000 65%);
+              mask-image: linear-gradient(to right, transparent 15%, #000 65%);
+    }
+    .hero .wrap { position: relative; width: 100%; }
+    h1 {
+      font-family: "Bricolage Grotesque", sans-serif;
+      font-weight: 700;
+      font-size: clamp(3.2rem, 11vw, 7.5rem);
+      line-height: 0.92;
+      letter-spacing: -0.035em;
+      margin-bottom: 1.5rem;
+    }
+    .lede {
+      max-width: 34ch;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; list-style: none; }
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border: 1.5px solid var(--ink);
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color .2s, color .2s;
+    }
+    .btn.primary { background: var(--ink); color: var(--paper); }
+    .btn:hover { background: var(--ink); color: var(--paper); }
+    .btn.primary:hover { background: var(--sea); border-color: var(--sea); }
 
-				<!-- Section -->
-					<section>
-						<header>
-							<h2>What's next</h2>
-						</header>
-						<div class="content">
-							<p><strong>Keep learning!</strong> I'm always motivated to learn especially when it's related to technology.
-							I will keep learning new technologies and continue to grow as a developer.</p>
-							
-						</div>
-					</section>
+    /* Sections */
+    section.block { padding: 72px 0; border-top: 1px solid var(--line); }
+    h2 {
+      font-family: "Bricolage Grotesque", sans-serif;
+      font-weight: 500;
+      font-size: 1.75rem;
+      letter-spacing: -0.01em;
+      margin-bottom: 28px;
+    }
+    .facts { list-style: none; }
+    .facts li {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .facts strong { font-weight: 600; }
+    .facts span { color: var(--muted); text-align: right; }
 
-				<!-- Elements -->
-				<!--
-					<section>
-						<header>
-							<h2>Elements</h2>
-						</header>
-						<div class="content">
+    .work { list-style: none; display: grid; gap: 36px; }
+    .work h3 {
+      font-family: "Bricolage Grotesque", sans-serif;
+      font-weight: 500;
+      font-size: 1.3rem;
+      margin-bottom: 6px;
+    }
+    .work p { color: var(--muted); max-width: 60ch; margin-bottom: 8px; }
+    .work a { font-weight: 600; text-underline-offset: 4px; }
+    .more { margin-top: 40px; }
 
-							<section>
-								<header>
-									<h3>Text</h3>
-								</header>
-								<div class="content">
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<hr />
-									<h5>Blockquote</h5>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h5>Preformatted</h5>
-									<pre><code>i = 0;
+    footer { padding: 72px 0 48px; border-top: 1px solid var(--line); }
+    footer p { color: var(--muted); }
+    footer .actions { margin: 20px 0 48px; }
+    .small { font-size: .875rem; }
 
-while (!deck.isInOrder()) {
-  print 'Iteration ' + i;
-  deck.shuffle();
-  i++;
-}
+    @media (max-width: 560px) {
+      .facts li { flex-direction: column; gap: 2px; }
+      .facts span { text-align: left; }
+      #net { -webkit-mask-image: linear-gradient(to bottom, #000 10%, transparent 70%);
+                     mask-image: linear-gradient(to bottom, #000 10%, transparent 70%); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .btn { transition: none; }
+    }
+  </style>
+</head>
+<body>
 
-print 'Sorted in ' + i + ' iterations.';</code></pre>
-								</div>
-							</section>
+  <header class="hero">
+    <canvas id="net" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <h1>Jovani Samuels</h1>
+      <p class="lede">Software engineer and tech enthusiast in Kingston, Jamaica. I build AI-powered applications and cloud systems, and I'm always learning something new.</p>
+      <ul class="actions">
+        <li><a class="btn primary" href="https://www.linkedin.com/in/iamjovani/">LinkedIn</a></li>
+        <li><a class="btn" href="https://github.com/iamjovani">GitHub</a></li>
+        <li><a class="btn" href="images/Updated-Resume.pdf">Resume</a></li>
+      </ul>
+    </div>
+  </header>
 
-							<section>
-								<header>
-									<h3>Lists</h3>
-								</header>
-								<div class="content">
+  <main>
+    <section class="block">
+      <div class="wrap">
+        <h2>Highlights</h2>
+        <ul class="facts">
+          <li><strong>Master's in Computer Science</strong><span>University of East London</span></li>
+          <li><strong>AWS Certified Solutions Architect – Associate</strong><span>Amazon Web Services</span></li>
+          <li><strong>BSc in Computer Science</strong><span>The University of the West Indies</span></li>
+        </ul>
+      </div>
+    </section>
 
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+    <section class="block">
+      <div class="wrap">
+        <h2>Selected projects</h2>
+        <ul class="work">
+          <li>
+            <h3>AI vehicle collision avoidance</h3>
+            <p>A simulation where cars learn to avoid collisions, using neural networks trained with a genetic algorithm.</p>
+            <a href="https://github.com/iamjovani?tab=repositories">View on GitHub</a>
+          </li>
+          <li>
+            <h3>Computer retail store</h3>
+            <p>A full e-commerce site built with Python and Flask, backed by a relational database.</p>
+            <a href="https://github.com/iamjovani?tab=repositories">View on GitHub</a>
+          </li>
+        </ul>
+        <p class="more"><a class="btn" href="https://github.com/iamjovani?tab=repositories">See all repositories</a></p>
+      </div>
+    </section>
+  </main>
 
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+  <footer>
+    <div class="wrap">
+      <h2>Get in touch</h2>
+      <p>Open to new opportunities, collaborations and good conversations about tech.</p>
+      <ul class="actions">
+        <li><a class="btn primary" href="mailto:jovani.17@hotmail.com">Email me</a></li>
+        <li><a class="btn" href="https://www.linkedin.com/in/iamjovani/">LinkedIn</a></li>
+        <li><a class="btn" href="https://github.com/iamjovani">GitHub</a></li>
+        <li><a class="btn" href="https://codepen.io/iamjovani">CodePen</a></li>
+      </ul>
+      <p class="small">© 2026 Jovani Samuels</p>
+    </div>
+  </footer>
 
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									</ul>
+  <script>
+    (function () {
+      const c = document.getElementById('net');
+      const ctx = c.getContext('2d');
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let w, h, pts = [];
 
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</div>
-							</section>
+      function init() {
+        const r = window.devicePixelRatio || 1;
+        w = c.clientWidth; h = c.clientHeight;
+        c.width = w * r; c.height = h * r;
+        ctx.setTransform(r, 0, 0, r, 0, 0);
+        const n = Math.round(Math.min(70, (w * h) / 14000));
+        pts = Array.from({ length: n }, () => ({
+          x: Math.random() * w, y: Math.random() * h,
+          vx: (Math.random() - 0.5) * 0.25, vy: (Math.random() - 0.5) * 0.25
+        }));
+      }
 
-							<section>
-								<header>
-									<h3>Table</h3>
-								</header>
-								<div class="content">
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
+      function draw() {
+        ctx.clearRect(0, 0, w, h);
+        for (let i = 0; i < pts.length; i++) {
+          const p = pts[i];
+          if (!reduce) {
+            p.x += p.vx; p.y += p.vy;
+            if (p.x < 0 || p.x > w) p.vx *= -1;
+            if (p.y < 0 || p.y > h) p.vy *= -1;
+          }
+          for (let j = i + 1; j < pts.length; j++) {
+            const q = pts[j], d = Math.hypot(p.x - q.x, p.y - q.y);
+            if (d < 130) {
+              ctx.strokeStyle = `rgba(44,125,160,${(1 - d / 130) * 0.45})`;
+              ctx.lineWidth = 1;
+              ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke();
+            }
+          }
+        }
+        pts.forEach((p, i) => {
+          const accent = i % 9 === 0;
+          ctx.fillStyle = accent ? '#E3A008' : '#13203A';
+          ctx.beginPath(); ctx.arc(p.x, p.y, accent ? 3.2 : 1.8, 0, Math.PI * 2); ctx.fill();
+        });
+        if (!reduce) requestAnimationFrame(draw);
+      }
 
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</div>
-							</section>
-
-							<section>
-								<header>
-									<h3>Buttons</h3>
-								</header>
-								<div class="content">
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button large">Large</a></li>
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</div>
-							</section>
-
-							<section>
-								<header>
-									<h3>Form</h3>
-								</header>
-								<div class="content">
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="demo-name">Name</label>
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-											</div>
-											<div class="field half">
-												<label for="demo-email">Email</label>
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-											</div>
-											<div class="field">
-												<label for="demo-category">Category</label>
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="field">
-												<label for="demo-message">Message</label>
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</div>
-							</section>
-
-						</div>
-					</section>
-				-->
-
-				<!-- Section -->
-					<section>
-						<header>
-							<h2>Get in touch</h2>
-						</header>
-						<div class="content">
-							<p><strong></strong></p>
-							<ul class="actions">
-								<li><a href="https://github.com/iamjovani" class="button primary large">GitHub</a></li>
-								<li><a href="iamjovani.github.io/images/Updated-Resume.pdf" class="button large">Resume</a></li>
-							</ul>
-						</div>
-						<footer>
-							<ul class="items">
-								<li>
-									<h3>Email</h3>
-									<a href="#">jovani.17@hotmail.com</a>
-								</li>
-								<li>
-									<h3>Elsewhere</h3>
-									<ul class="icons">
-										<li><a href="https://www.linkedin.com/in/jovani-samuels-574b6379/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-										<li><a href="https://github.com/iamjovani" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-										<li><a href="https://codepen.io/iamjovani" class="icon brands fa-codepen"><span class="label">Codepen</span></a></li>
-									</ul>
-								</li>
-							</ul>
-						</footer>
-					</section>
-
-				<!-- Copyright -->
-				<!--	<div class="copyright">&copy; Untitled. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</div> -->
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+      init(); draw();
+      window.addEventListener('resize', () => { init(); if (reduce) draw(); });
+    })();
+  </script>
+</body>
 </html>
