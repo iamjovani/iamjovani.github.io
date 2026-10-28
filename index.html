@@ -7,6 +7,9 @@
   <meta name="description" content="Jovani Samuels is a software engineer and tech enthusiast in Kingston, Jamaica, building AI-powered applications and cloud systems. MSc Computer Science, AWS Certified Solutions Architect.">
   <meta name="author" content="Jovani Samuels">
   <link rel="canonical" href="https://iamjovani.github.io/">
+  <meta name="theme-color" content="#EDF1F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0E1828" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2313203A'/%3E%3Ctext x='29' y='45' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='38' fill='%23EDF1F5'%3EJ%3C/text%3E%3Ccircle cx='46' cy='42' r='5' fill='%23E3A008'/%3E%3C/svg%3E">
 
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Jovani Samuels | Software Engineer">
@@ -26,7 +29,7 @@
       { "@type": "CollegeOrUniversity", "name": "University of East London" },
       { "@type": "CollegeOrUniversity", "name": "The University of the West Indies" }
     ],
-    "knowsAbout": ["Artificial Intelligence", "Cloud Architecture", "AWS", "Full Stack Development", "Automation"],
+    "knowsAbout": ["Artificial Intelligence", "Cloud Architecture", "AWS", "Full Stack Development", "Automation", "Python", "Java", "JavaScript"],
     "sameAs": [
       "https://www.linkedin.com/in/iamjovani/",
       "https://github.com/iamjovani",
@@ -47,6 +50,20 @@
       --line: #CBD4E0;
       --sea: #2C7DA0;
       --sun: #E3A008;
+      --node: #13203A;
+      --link: 44,125,160;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --paper: #0E1828;
+        --ink: #E6ECF3;
+        --muted: #98A6BC;
+        --line: #22324A;
+        --sea: #5BB3D6;
+        --sun: #F2B42A;
+        --node: #C9D6E6;
+        --link: 91,179,214;
+      }
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -57,17 +74,17 @@
       -webkit-font-smoothing: antialiased;
     }
     a { color: inherit; }
-    a:focus-visible, .btn:focus-visible {
+    a:focus-visible {
       outline: 3px solid var(--sea);
       outline-offset: 3px;
-      border-radius: 4px;
+      border-radius: 6px;
     }
     .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
 
     /* Hero */
     .hero {
       position: relative;
-      min-height: 88vh;
+      min-height: 90vh;
       display: flex;
       align-items: flex-end;
       padding-bottom: 12vh;
@@ -78,10 +95,18 @@
       inset: 0;
       width: 100%;
       height: 100%;
-      -webkit-mask-image: linear-gradient(to right, transparent 15%, #000 65%);
-              mask-image: linear-gradient(to right, transparent 15%, #000 65%);
+      -webkit-mask-image: linear-gradient(to right, transparent 12%, #000 62%);
+              mask-image: linear-gradient(to right, transparent 12%, #000 62%);
+      animation: fade 1.6s ease-out both;
     }
-    .hero .wrap { position: relative; width: 100%; }
+    .hero .wrap { position: relative; width: 100%; pointer-events: none; }
+    .hero .wrap a { pointer-events: auto; }
+    .hero .wrap > * { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+    .hero .wrap > :nth-child(2) { animation-delay: .12s; }
+    .hero .wrap > :nth-child(3) { animation-delay: .24s; }
+    @keyframes rise { from { opacity: 0; transform: translateY(18px); } }
+    @keyframes fade { from { opacity: 0; } }
+
     h1 {
       font-family: "Bricolage Grotesque", sans-serif;
       font-weight: 700;
@@ -90,6 +115,7 @@
       letter-spacing: -0.035em;
       margin-bottom: 1.5rem;
     }
+    h1 .dot { color: var(--sun); }
     .lede {
       max-width: 34ch;
       font-size: 1.25rem;
@@ -105,11 +131,11 @@
       border-radius: 999px;
       font-weight: 600;
       text-decoration: none;
-      transition: background-color .2s, color .2s;
+      transition: background-color .2s, color .2s, border-color .2s;
     }
     .btn.primary { background: var(--ink); color: var(--paper); }
     .btn:hover { background: var(--ink); color: var(--paper); }
-    .btn.primary:hover { background: var(--sea); border-color: var(--sea); }
+    .btn.primary:hover { background: var(--sea); border-color: var(--sea); color: var(--paper); }
 
     /* Sections */
     section.block { padding: 72px 0; border-top: 1px solid var(--line); }
@@ -131,16 +157,34 @@
     .facts strong { font-weight: 600; }
     .facts span { color: var(--muted); text-align: right; }
 
-    .work { list-style: none; display: grid; gap: 36px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; }
+    .tags li {
+      font-size: .85rem;
+      color: var(--muted);
+      padding: 4px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+    }
+    .stack { margin-top: 32px; }
+
+    .work { list-style: none; }
+    .work li { border-bottom: 1px solid var(--line); }
+    .work li:first-child { border-top: 1px solid var(--line); }
+    .work a {
+      display: block;
+      padding: 26px 0;
+      text-decoration: none;
+    }
     .work h3 {
       font-family: "Bricolage Grotesque", sans-serif;
       font-weight: 500;
-      font-size: 1.3rem;
+      font-size: 1.35rem;
       margin-bottom: 6px;
+      transition: color .2s;
     }
-    .work p { color: var(--muted); max-width: 60ch; margin-bottom: 8px; }
-    .work a { font-weight: 600; text-underline-offset: 4px; }
-    .more { margin-top: 40px; }
+    .work a:hover h3 { color: var(--sea); }
+    .work p { color: var(--muted); max-width: 58ch; margin-bottom: 14px; }
+    .more { margin-top: 36px; }
 
     footer { padding: 72px 0 48px; border-top: 1px solid var(--line); }
     footer p { color: var(--muted); }
@@ -150,12 +194,14 @@
     @media (max-width: 560px) {
       .facts li { flex-direction: column; gap: 2px; }
       .facts span { text-align: left; }
-      #net { -webkit-mask-image: linear-gradient(to bottom, #000 10%, transparent 70%);
-                     mask-image: linear-gradient(to bottom, #000 10%, transparent 70%); }
+      #net {
+        -webkit-mask-image: linear-gradient(to bottom, #000 10%, transparent 70%);
+                mask-image: linear-gradient(to bottom, #000 10%, transparent 70%);
+      }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .btn { transition: none; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
     }
   </style>
 </head>
@@ -164,7 +210,7 @@
   <header class="hero">
     <canvas id="net" aria-hidden="true"></canvas>
     <div class="wrap">
-      <h1>Jovani Samuels</h1>
+      <h1>Jovani Samuels<span class="dot">.</span></h1>
       <p class="lede">Software engineer and tech enthusiast in Kingston, Jamaica. I build AI-powered applications and cloud systems, and I'm always learning something new.</p>
       <ul class="actions">
         <li><a class="btn primary" href="https://www.linkedin.com/in/iamjovani/">LinkedIn</a></li>
@@ -183,6 +229,10 @@
           <li><strong>AWS Certified Solutions Architect – Associate</strong><span>Amazon Web Services</span></li>
           <li><strong>BSc in Computer Science</strong><span>The University of the West Indies</span></li>
         </ul>
+        <ul class="tags stack" aria-label="Technologies">
+          <li>Python</li><li>Java</li><li>JavaScript</li><li>AWS</li>
+          <li>Flask</li><li>SQL</li><li>PHP</li><li>Machine learning</li>
+        </ul>
       </div>
     </section>
 
@@ -191,14 +241,18 @@
         <h2>Selected projects</h2>
         <ul class="work">
           <li>
-            <h3>AI vehicle collision avoidance</h3>
-            <p>A simulation where cars learn to avoid collisions, using neural networks trained with a genetic algorithm.</p>
-            <a href="https://github.com/iamjovani?tab=repositories">View on GitHub</a>
+            <a href="https://github.com/iamjovani?tab=repositories">
+              <h3>AI vehicle collision avoidance</h3>
+              <p>A simulation where cars learn to avoid collisions, using neural networks trained with a genetic algorithm.</p>
+              <ul class="tags"><li>Python</li><li>Neural networks</li><li>Genetic algorithms</li></ul>
+            </a>
           </li>
           <li>
-            <h3>Computer retail store</h3>
-            <p>A full e-commerce site built with Python and Flask, backed by a relational database.</p>
-            <a href="https://github.com/iamjovani?tab=repositories">View on GitHub</a>
+            <a href="https://github.com/iamjovani?tab=repositories">
+              <h3>Computer retail store</h3>
+              <p>A full e-commerce site with product listings, cart and checkout, backed by a relational database.</p>
+              <ul class="tags"><li>Python</li><li>Flask</li><li>SQL</li></ul>
+            </a>
           </li>
         </ul>
         <p class="more"><a class="btn" href="https://github.com/iamjovani?tab=repositories">See all repositories</a></p>
@@ -223,50 +277,81 @@
   <script>
     (function () {
       const c = document.getElementById('net');
+      const hero = c.parentElement;
       const ctx = c.getContext('2d');
-      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      let w, h, pts = [];
+      const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const scheme = window.matchMedia('(prefers-color-scheme: dark)');
+      let w, h, pts = [], col = {}, mouse = null;
+
+      function colors() {
+        const s = getComputedStyle(document.documentElement);
+        col = {
+          node: s.getPropertyValue('--node').trim(),
+          sun: s.getPropertyValue('--sun').trim(),
+          link: s.getPropertyValue('--link').trim()
+        };
+      }
 
       function init() {
         const r = window.devicePixelRatio || 1;
         w = c.clientWidth; h = c.clientHeight;
         c.width = w * r; c.height = h * r;
         ctx.setTransform(r, 0, 0, r, 0, 0);
-        const n = Math.round(Math.min(70, (w * h) / 14000));
+        const n = Math.round(Math.min(75, (w * h) / 13000));
         pts = Array.from({ length: n }, () => ({
           x: Math.random() * w, y: Math.random() * h,
           vx: (Math.random() - 0.5) * 0.25, vy: (Math.random() - 0.5) * 0.25
         }));
       }
 
+      function line(a, b, alpha, color) {
+        ctx.strokeStyle = color.replace('A', alpha);
+        ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+      }
+
       function draw() {
         ctx.clearRect(0, 0, w, h);
+        ctx.lineWidth = 1;
+        const linkCol = `rgba(${col.link},A)`;
         for (let i = 0; i < pts.length; i++) {
           const p = pts[i];
-          if (!reduce) {
+          if (!motion.matches) {
             p.x += p.vx; p.y += p.vy;
             if (p.x < 0 || p.x > w) p.vx *= -1;
             if (p.y < 0 || p.y > h) p.vy *= -1;
           }
           for (let j = i + 1; j < pts.length; j++) {
             const q = pts[j], d = Math.hypot(p.x - q.x, p.y - q.y);
-            if (d < 130) {
-              ctx.strokeStyle = `rgba(44,125,160,${(1 - d / 130) * 0.45})`;
-              ctx.lineWidth = 1;
-              ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke();
+            if (d < 130) line(p, q, (1 - d / 130) * 0.45, linkCol);
+          }
+          if (mouse) {
+            const d = Math.hypot(p.x - mouse.x, p.y - mouse.y);
+            if (d < 170) {
+              ctx.globalAlpha = (1 - d / 170) * 0.9;
+              ctx.strokeStyle = col.sun;
+              ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
+              ctx.globalAlpha = 1;
             }
           }
         }
         pts.forEach((p, i) => {
           const accent = i % 9 === 0;
-          ctx.fillStyle = accent ? '#E3A008' : '#13203A';
+          ctx.fillStyle = accent ? col.sun : col.node;
           ctx.beginPath(); ctx.arc(p.x, p.y, accent ? 3.2 : 1.8, 0, Math.PI * 2); ctx.fill();
         });
-        if (!reduce) requestAnimationFrame(draw);
+        if (!motion.matches) requestAnimationFrame(draw);
       }
 
-      init(); draw();
-      window.addEventListener('resize', () => { init(); if (reduce) draw(); });
+      hero.addEventListener('pointermove', e => {
+        const r = c.getBoundingClientRect();
+        mouse = { x: e.clientX - r.left, y: e.clientY - r.top };
+        if (motion.matches) draw();
+      });
+      hero.addEventListener('pointerleave', () => { mouse = null; if (motion.matches) draw(); });
+      window.addEventListener('resize', () => { init(); if (motion.matches) draw(); });
+      scheme.addEventListener('change', () => { colors(); if (motion.matches) draw(); });
+
+      colors(); init(); draw();
     })();
   </script>
 </body>
